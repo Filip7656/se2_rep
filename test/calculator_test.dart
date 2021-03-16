@@ -9,7 +9,7 @@ void main() {
     moreNumbersTest();
     enterTest();
     justNewLine();
-    //negativeNumbers();
+    negativeNumbers();
     greaterThan1000();
     singleDeliminer();
     multiDeliminer();
