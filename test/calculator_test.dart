@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:se2_tdd/Calculator.dart';
 import 'package:test/test.dart';
 
@@ -82,7 +84,11 @@ void negativeNumbers() {
   var input_number = '-1,2,3 \n 4';
   // When
   test('Negative number', () {
-    expect(calculator(input_number), throwsA(TypeMatcher<Exception>()));
+    try {
+      calculator(input_number);
+    } catch (e) {
+      assert(e is FormatException);
+    }
   });
 }
 
